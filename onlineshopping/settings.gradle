@@ -1,0 +1,5 @@
+rootProject.name = 'onlineshopping'
+
+include ':shoppingbackend'
+project(':shoppingbackend').projectDir = new File('../shoppingbackend')
+

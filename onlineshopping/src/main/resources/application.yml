@@ -1,0 +1,15 @@
+spring:
+    mvc:
+        view:
+            prefix: /WEB-INF/views/
+            suffix: .jsp
+        static-path-pattern: /resources/**
+    output:
+        ansi:
+            enabled: always
+server:
+    tomcat:
+        uri-encoding: UTF-8
+    servlet:
+        encoding:
+            charset: UTF-8
