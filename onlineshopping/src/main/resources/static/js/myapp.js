@@ -48,9 +48,23 @@ $(function() {
 
 	// code for jquery dataTable
 	var $table = $('#productListTable');
-
+	var products = [
+        ['1', 'abc'],
+        ['2', 'edf'],
+        ['3', 'gij'],
+        ['4', 'lmn'],
+        ['5', 'pqr']
+    ];
+    if ($table.length) {
+        console.log('inside the table');
+        $table.DataTable({
+			lengthMenu: [[3, 5, 10, -1], ['3 Records', '5 Records', '10 Records', 'All']],
+			pageLength: 5,
+            data: products
+        }); 
+    }
 	// execute the below code only where we have this table
-	if ($table.length) {
+	/*if ($table.length) {
 		// console.log('Inside the table!');
 
 		var jsonUrl = '';
@@ -146,14 +160,14 @@ $(function() {
 
 							} ]
 				});
-	}
+	}*/
 
 	
 	
 	// list of all products for admin
 	var $productsTable = $('#productsTable');
 	
-	
+	/*
 	if($productsTable.length) {
 		
 		var jsonUrl = window.contextRoot + '/json/data/admin/all/products';
@@ -270,7 +284,7 @@ $(function() {
 							
 					}
 				});
-	}
+	}*/
 	
 	
 	
