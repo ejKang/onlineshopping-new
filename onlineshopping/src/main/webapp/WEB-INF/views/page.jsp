@@ -3,12 +3,20 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
+<spring:url var="css" value="/resources/css" />
+<spring:url var="js" value="/resources/js" />
+<spring:url var="images" value="/resources/images" />
 
+<!-- <c:set var="contextRoot" value="${pageContext.request.contextPath}" /> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Online Shopping Website Using Spring MVC and Hibernate">
+    <!-- <meta name="_csrf" content="${_csrf.token}">
+    <meta name="_csrf_header" content="${_csrf.headerName}"> -->
 
     <title>Online Shopping - ${title}</title>
 
@@ -21,18 +29,18 @@
 
 
     <!-- Bootstrap Core CSS -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Readable Theme -->
-    <link href="resources/css/bootstrap-readable-theme.css" rel="stylesheet">
+    <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
 
     <!-- Bootstrap DataTables -->
-    <link href="resources/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 
-    <!-- Custom CSS-->
-    <link href="resources/css/myapp.css" rel="stylesheet"> 
+    <!-- Custom CSS -->
+    <link href="${css}/myapp.css" rel="stylesheet">
 </head>
 
 <body>
@@ -68,24 +76,24 @@
             <%@include file="./shared/footer.jsp"%>
 
             <!-- jQuery -->
-            <script src="resources/js/jquery.js"></script>
+            <script src="${js}/jquery.js"></script>
 
-            <script src="resources/js/jquery.validate.js"></script>
+            <script src="${js}/jquery.validate.js"></script>
 
             <!-- Bootstrap Core JavaScript -->
-            <script src="resources/js/bootstrap.min.js"></script>
+            <script src="${js}/bootstrap.min.js"></script>
 
             <!-- DataTable Plugin -->
-            <script src="resources/js/jquery.dataTables.js"></script>
+            <script src="${js}/jquery.dataTables.js"></script>
 
             <!-- DataTable Bootstrap Script -->
-            <script src="resources/js/dataTables.bootstrap.js"></script>
+            <script src="${js}/dataTables.bootstrap.js"></script>
 
             <!-- DataTable Bootstrap Script -->
-            <script src="resources/js/bootbox.min.js"></script>
+            <script src="${js}/bootbox.min.js"></script>
 
             <!-- Self coded javascript -->
-            <script src="resources/js/myapp.js"></script>
+            <script src="${js}/myapp.js"></script>
         </div>
     </div>
 </body>
