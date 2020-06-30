@@ -66,9 +66,24 @@
 					<table id="productListTable" class="table table-striped table-borderd">
                         <thead>
                             <tr>
-                                <th>ID</th><th>Name</th>
+								<th>ID</th>
+								<th>Name</th>
+								<th>Brand</th>
+								<th>Price</th>
+								<th>Qty.Available</th>
+								<th></th>
                             </tr>
-                        </thead>
+						</thead>
+						<tfoot>
+                            <tr>
+								<th>ID</th>
+								<th>Name</th>
+								<th>Brand</th>
+								<th>Price</th>
+								<th>Qty.Available</th>
+								<th></th>
+                            </tr>
+                        </tfoot>
                     </table>
 				
 				</div>

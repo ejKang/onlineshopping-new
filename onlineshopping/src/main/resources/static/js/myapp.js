@@ -48,19 +48,43 @@ $(function() {
 
 	// code for jquery dataTable
 	var $table = $('#productListTable');
-	var products = [
-        ['1', 'abc'],
-        ['2', 'edf'],
-        ['3', 'gij'],
-        ['4', 'lmn'],
-        ['5', 'pqr']
-    ];
+	
     if ($table.length) {
-        console.log('inside the table');
+		console.log('inside the table');
+		
+		var jsonUrl = '';
+		if (window.categoryId == '') {
+			jsonUrl = window.contextRoot + '/json/data/all/products';
+		} else {
+			jsonUrl = window.contextRoot + '/json/data/category/'+ window.categoryId + '/products';
+		}
         $table.DataTable({
 			lengthMenu: [[3, 5, 10, -1], ['3 Records', '5 Records', '10 Records', 'All']],
 			pageLength: 5,
-            data: products
+			ajax : { 
+				url : jsonUrl,
+				dataSrc : ''
+			},
+			columns : [
+				{
+					data : 'code'
+				},
+				{
+					data : 'name'
+				},
+				{
+					data : 'brand'
+				},
+				{
+					data : 'unitPrice'
+				},
+				{
+					data : 'quantity'
+				},
+				{
+					data : 'id'
+				}
+			]
         }); 
     }
 	// execute the below code only where we have this table
