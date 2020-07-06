@@ -34,3 +34,4 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+//.\gradlew clean build --exclude-task test
