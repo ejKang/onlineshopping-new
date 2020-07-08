@@ -26,16 +26,16 @@
 						<div class="carousel-inner">
 
 							<div class="item active">
-								<img class="slide-image" src="resources/images/banner1.jpg" alt="">
+								<img class="slide-image" src="resources/static/images/banner1.jpg" alt="">
 							</div>
 							<div class="item">
-								<img class="slide-image" src="resources/images/banner2.jpg" alt="">
+								<img class="slide-image" src="resources/static/images/banner2.jpg" alt="">
 							</div>
 							<div class="item">
-								<img class="slide-image" src="resources/images/banner3.jpg" alt="">
+								<img class="slide-image" src="resources/static/images/banner3.jpg" alt="">
 							</div>
 							<div class="item">
-								<img class="slide-image" src="resources/images/banner4.jpg" alt="">
+								<img class="slide-image" src="resources/static/images/banner4.jpg" alt="">
 							</div>
 						</div>
 						<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span

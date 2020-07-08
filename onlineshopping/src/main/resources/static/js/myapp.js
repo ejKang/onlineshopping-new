@@ -70,7 +70,7 @@ $(function() {
 					data : 'code',
 					bSortable : false,
 					mRender : function(data, type, row) {
-						return '<img src="'+window.contextRoot+'/resources/images/'+data + '.jpg" class="dataTableImg"/>';
+						return '<img src="'+window.contextRoot+'/resources/static/images/'+data + '.jpg" class="dataTableImg"/>';
 					}
 				},
 				{
