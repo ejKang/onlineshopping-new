@@ -1,5 +1,8 @@
 package net.ejkang.onlineshopping.exception;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
+
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
@@ -31,12 +34,17 @@ public class GlobalDefaultExceptionHandler {
     }
 
     @ExceptionHandler(Exception.class)
-    public ModelAndView handlerException() {
+    public ModelAndView handlerException(Exception ex) {
         ModelAndView mv = new ModelAndView("error");
+
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+
+        ex.printStackTrace(pw);
 
         mv.addObject("title", "Error Page");
         mv.addObject("errorTitle", "This is not constructed !");
-        mv.addObject("errorDescription", "The Page you are looking for is not available now ! ");
+        mv.addObject("errorDescription", sw.toString());
 
         return mv;
     }
