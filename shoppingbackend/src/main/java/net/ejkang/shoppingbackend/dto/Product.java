@@ -134,6 +134,14 @@ public class Product {
         this.views = views;
     }
 
+    @Override
+    public String toString() {
+        return "Product [active=" + active + ", brand=" + brand + ", categoryId=" + categoryId + ", code=" + code
+                + ", description=" + description + ", id=" + id + ", name=" + name + ", purchases=" + purchases
+                + ", quantity=" + quantity + ", supplierId=" + supplierId + ", unitPrice=" + unitPrice + ", views="
+                + views + "]";
+    }
+
 
 
 
