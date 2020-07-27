@@ -14,11 +14,16 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id ;
     private String code;
+    
+    @NotBlank(message = "Please enter the Product name")
     private String name;
+    @NotBlank(message = "Please enter the Product brand") 
     private String brand;
+    @NotBlank(message = "Please enter the Description for Product") 
     private String description;
 
     @Column(name = "unit_price")
+    @Min(value=1, message="The price cannot be less than 1!")
     private double unitPrice;
     private int quantity;
 

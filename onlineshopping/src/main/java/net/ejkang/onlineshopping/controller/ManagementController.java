@@ -57,8 +57,14 @@ public class ManagementController {
     }
 
     @RequestMapping(value="products", method=RequestMethod.POST)
-    public String handleProductSubmission(@ModelAttribute("product")Product mProduct) {
+    public String handleProductSubmission(@Valid @ModelAttribute("product")Product mProduct, BindingResult results, Model model) {
 
+        if (results.hasErrors()) {
+            model.addObject("userClickManageProducts", true);
+            model.addObject("title", "Manage Products");
+
+            return "page";
+        }
         logger.info(mProduct.toString());
         
         productDAO.add(mProduct);
